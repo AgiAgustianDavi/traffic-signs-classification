@@ -1,4 +1,5 @@
-# 6. Load Model and Create Flask App
+from flask import Flask, request, render_template
+
 app = Flask(__name__)
 model = keras.models.load_model("traffic_sign_model.h5")
 class_labels = list(train_generator.class_indices.keys())
